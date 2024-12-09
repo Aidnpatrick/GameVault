@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="flex-row">
+        <nav class="side-bar">
+            <a class="heading" href="index.html">GameVault</a>
+            <a class="link-side-bar">Settings⚙️</a>
+            <a class="link-side-bar">Patch Notes📄</a>
+            <a class="link-side-bar">About🧑‍🦰</a>
+        </nav>
+        <div class="right">
+            <style>
+                .top {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                    position: sticky;
+                    top: 0;
+                }
+            </style>
+            <div class="top">
+                <nav class="top-bar">
+                    <button class="link" onclick="gameListLoad()">Games⬇</button>                
+                    <a class="link">Proxies🥷</a>
+                    <a class="link">Other Websites↗️</a>
+                </nav>
+                <div class="game-list" id="gameList" style="opacity: 0">
+                    <div class="flex-row-list" style="justify-content: center">
+                        <a class="link-list">Platforming</a>
+                        <a class="link-list">2 Player</a>
+                        <a class="link-list">Shooting</a>
+                        <a class="link-list">Casual</a>
+                        <a class="link-list">Management</a>
+                        <a class="link-list">Sports</a>
+                        <a class="link-list">Puzzle</a>
+                        <a class="link-list">Action</a>
+                        <a class="link-list">Running</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center">
+                <h1 class="heading-main">🗃️Game Library🗃️</h1>
+                <p>This is a library for all of your favorite games.</p>
+            <style>
+                .search-bar {
+                    width: 350px;
+                    border: none;
+                    border-radius: 5px;
+                    height: 35px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid rgb(164, 164, 164);
+                }
+                .input {
+                    font-size: 15px;
+                    border: none;
+                    color: white;
+                    border-radius: 5px;
+                    height: 70%;
+                    width: 80%;
+                    background-color: #252525;
+                }
+
+                .input:focus {
+                    outline: none;
+                    border: none;
+                }
+                .enter, .random {
+                    margin-inline: 5px;
+                    color: white;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    display: flex;
+                    font-size: 20px;
+                    border-radius: 5px;
+
+                    border: none;
+                    height: 80%;
+                    width: 30px;
+                    transition: background 0.3s ease; 
+                    cursor: pointer;
+
+                }
+                .enter {
+                    background-color: #727272;
+                }
+                .enter:hover {
+                    background-color: grey;
+                }
+                .random {
+                    background-color: rgb(42, 177, 255);
+                }
+                .random:hover {
+                    background-color: lightblue;
+                }
+            </style>
+            <div class="content">
+                <div class="search-bar">
+                    <input class="input" placeholder="Search any game..."></input>
+                    <button class="enter" onclick="search()">🔎</button>
+                    <button class="random" onclick="randomGame()">🎲</button>
+                </div>
+                <br>
+                <br>
+                
+                <div class="section-library">
+                    <div class="flex-column">
+                        <br>
+                        <div class="flex-row" style="justify-content: center;">
+                            
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="flex-row" style="justify-content: center">
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+                            <div class="game-block">
+                                <p>Scrap Metal</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

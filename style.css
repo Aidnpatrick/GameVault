@@ -6,7 +6,9 @@ body {
     color: white;
     background-color: #252525;
 }
-
+/*
+    background-color: #252525;
+*/
 
 nav.side-bar {
 
@@ -24,8 +26,7 @@ nav.side-bar {
 }
 nav.top-bar {
     border-bottom: 1px solid rgb(81, 81, 81);
-    text-align: right;
-    align-items: right;
+    
     justify-content: end;
     display: flex;
     flex-direction: row;
@@ -36,28 +37,50 @@ nav.top-bar {
     position: sticky;
     top: 0;
     z-index: 1000;
-    
 }
 .game-list {
-    opacity: 50%;
     margin-top: -15px;
     width: 100%;
     background-color: #3c3c3c;
     height: 60px;
     display: block;
     border-bottom: 1px solid #515151;
-    position: sticky;
-    top: 0;
+    position: absolute;
+    top: 40px;
+
     
 }
+@media(max-width: 1000px) {
+    .game-list {
+        height: 100%;
 
+    }
+}
+
+.flex-row-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+@media(max-width: 600px) {
+    .flex-row-list {
+        flex-direction: column;
+    }
+}
+
+.flex-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .link-list {
     opacity: 80%;
     height: 200%;
     padding: 10px;
     font-weight: bold;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     transition: background 0.3s ease;
@@ -67,6 +90,17 @@ nav.top-bar {
     margin-top: 18px;
     background-color: #111111;
     border-radius: 5px;
+    transition: border 0.3s ease;
+}
+.link-list:hover {
+
+    border: 1px solid white;
+}
+@media(max-width: 100px) {
+    .link-list {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
 }
 .flex-row {
     width: 100%;
@@ -92,21 +126,41 @@ nav.top-bar {
     justify-content: center;
 
     background-color: #252525;
-    
+    width: 100%;
 }
+
 
 .section-regular, .section-trending {
     background-color: #121212;
     border: 1px solid #515151; 
     margin-top: -20px;
-    height: 320px;
+    height: 280px;
     width: 95%;
     border-radius: 5px;
     transition: border 0.1s ease, background-image 0.3s ease;
-    overflow: hidden; /* Ensures content fits nicely within the box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media(max-width: 400px) {
+    .game-block {
+        
+    }
+}
+
+.section-library {
+    background-color: #121212;
+    border: 1px solid #515151; 
+    margin-top: -20px;
+    height: 780px;
+    width: 95%;
+    border-radius: 5px;
+    transition: border 0.1s ease, background-image 0.3s ease;
+    
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 /* Section Regular */
 .section-regular:hover {
     border: 1px solid rgb(128, 128, 128);
@@ -119,7 +173,7 @@ nav.top-bar {
 
 
 .game-block {
-    margin: 20px;
+    margin-inline: 12px;
     width: 150px;
     height: 200px;
     background-color:rgb(64, 64, 64);
@@ -136,6 +190,11 @@ nav.top-bar {
 .game-block:hover {
     border: 1px solid white;
 }
+@media(max-width: 1000px) {
+    .game-block {
+        
+    }
+}
 .footer{
     padding: 0;
     margin-top: -15px;
@@ -151,7 +210,6 @@ nav.top-bar {
     height: 200%;
     padding: 10px;
     font-weight: bold;
-    margin-right: 20px;
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     transition: background 0.3s ease;
@@ -161,7 +219,6 @@ nav.top-bar {
     color: white;
 }
 .link:hover {
-    
     background-color: rgb(64, 64, 64);
 
 }
@@ -184,7 +241,8 @@ nav.top-bar {
     background-color: rgb(64, 64, 64);
 }
 .heading {
-    margin-left: 10px;
+
+    margin-left: 5px;
     width: 120px;
     margin-top: 10px;
 
@@ -194,23 +252,25 @@ nav.top-bar {
     margin-bottom: 100px;
     color: blue;
     border-radius: 5px;
-    
+    text-decoration: none;
 }
 .heading-main {
-    margin-top: -20px;
+
 }
 
 .library-button {
-    background-color: green;
-    padding: 10px;
+    background-color: rgb(0, 183, 0);
+    padding: 15px;
     border-radius: 5px;
-    border: 1px solid rgb(152, 152, 152);
+
     cursor: pointer;
     transition: background 0.3s ease;
-
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
 }
 
 .library-button:hover {
-    background-color: rgb(0, 156, 0);
+    background-color: rgb(0, 214, 0);
     
 }
