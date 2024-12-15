@@ -10,12 +10,7 @@
 <body>
 
     <div class="flex-row">
-        <nav class="side-bar">
-            <a class="heading" href="index.html">GameVault</a>
-            <a class="link-side-bar">Settings⚙️</a>
-            <a class="link-side-bar">Patch Notes📄</a>
-            <a class="link-side-bar">About🧑‍🦰</a>
-        </nav>
+
         <div class="right">
             <style>
                 .top {
@@ -28,14 +23,32 @@
                     top: 0;
                 }
             </style>
+            <script>
+                function gameListLoad() {
+                // Get the element by its ID
+                let list = document.getElementById('gameList');
+
+                // Toggle the display property
+                if (list.style.opacity === "1") {
+                    list.style.opacity = "0";
+                } else {
+                    list.style.opacity = "1";
+                }
+            }
+            </script>
             <div class="top">
                 <nav class="top-bar">
-                    <button class="link" onclick="gameListLoad()">Games⬇</button>                
-                    <a class="link">Proxies🥷</a>
-                    <a class="link">Other Websites↗️</a>
+                    <a class="heading" href="../index.html">GameVault</a>
+                    <div style="display: flex;">
+                        
+                        <button class="link" onclick="gameListLoad()"><img src="icons/gamepad-solid.svg" alt="" >Games</button>                
+                        <a class="link"><img src="icons/server-solid.svg" alt="">Proxies</a>
+                        <a class="link">Other Websites↗️</a>
+                    </div>
                 </nav>
+
                 <div class="game-list" id="gameList" style="opacity: 0">
-                    <div class="flex-row-list" style="justify-content: center">
+                    <div class="flex-row" style="justify-content: center" >
                         <a class="link-list">Platforming</a>
                         <a class="link-list">2 Player</a>
                         <a class="link-list">Shooting</a>
@@ -46,14 +59,16 @@
                         <a class="link-list">Action</a>
                         <a class="link-list">Running</a>
                     </div>
+
+                    
                 </div>
             </div>
-
             <div class="center">
                 <h1 class="heading-main">🗃️Game Library🗃️</h1>
                 <p>This is a library for all of your favorite games.</p>
             <style>
                 .search-bar {
+                    padding: 1px;
                     width: 350px;
                     border: none;
                     border-radius: 5px;
@@ -72,6 +87,7 @@
                     height: 70%;
                     width: 80%;
                     background-color: #252525;
+
                 }
 
                 .input:focus {
@@ -87,7 +103,7 @@
                     display: flex;
                     font-size: 20px;
                     border-radius: 5px;
-
+                    
                     border: none;
                     height: 80%;
                     width: 30px;
@@ -102,54 +118,54 @@
                     background-color: grey;
                 }
                 .random {
-                    background-color: rgb(42, 177, 255);
+                    background-color: rgb(0, 149, 235);
                 }
                 .random:hover {
-                    background-color: lightblue;
+                    background-color: rgb(66, 208, 255);
                 }
             </style>
             <div class="content">
                 <div class="search-bar">
                     <input class="input" placeholder="Search any game..."></input>
-                    <button class="enter" onclick="search()">🔎</button>
-                    <button class="random" onclick="randomGame()">🎲</button>
+                    <button class="enter" onclick="search()"><img src="icons/magnifying-glass-solid.svg"></button>
+                    <button class="random" onclick="randomGame()"><img src="icons/dice-five-solid.svg"/>
                 </div>
                 <br>
                 <br>
-                
+
                 <div class="section-library">
                     <div class="flex-column">
                         <br>
                         <div class="flex-row" style="justify-content: center;">
-                            
-                            <div class="game-block">
-                                <p>Scrap Metal</p>
-                            </div>
-                            <div class="game-block">
-                                <p>Scrap Metal</p>
-                            </div>
-                            <div class="game-block">
-                                <p>Scrap Metal</p>
-                            </div>
-                            <div class="game-block">
-                                <p>Scrap Metal</p>
-                            </div>
-                            <div class="game-block">
-                                <p>Scrap Metal</p>
-                            </div>
-                            <div class="game-block">
-                                <p>Scrap Metal</p>
-                            </div>
+                            <a class="game-block" href="games/game-page.html" onclick="gameIdChange(0)">
+                                <p>Slope</p>
+                            </a>
+
+                            <a class="game-block" href="games/game-page.html" onclick="gameIdChange(1)">
+                                <p>Basket Random</p>
+                            </a>
+                            <a class="game-block" href="games/game-page.html" onclick="gameIdChange(2)">
+                                <p>1v1.lol</p>
+                            </a>
+                            <a class="game-block" href="games/game-page.html" onclick="gameIdChange(3)">
+                                <p>2048</p>
+                            </a>
+                            <a class="game-block" href="games/game-page.html" onclick="gameIdChange(4)">
+                                <p>Backrooms</p>
+                            </a>
+                            <a class="game-block" href="games/game-page.html" onclick="gameIdChange(5)">
+                                <p>Adventure Drivers</p>
+                            </a>
 
                         </div>
                         <br>
                         <div class="flex-row" style="justify-content: center">
-                            <div class="game-block">
-                                <p>Scrap Metal</p>
-                            </div>
-                            <div class="game-block">
-                                <p>Scrap Metal</p>
-                            </div>
+                            <a class="game-block" href="games/game-page.html" onclick="gameIdChange(6)">
+                                <p>Bloon's TD 4</p>
+                            </a>
+                            <a class="game-block" href="games/game-page.html" onclick="gameIdChange(7)">
+                                <p>Blumgi Slime</p>
+                            </a>
                             <div class="game-block">
                                 <p>Scrap Metal</p>
                             </div>
@@ -171,6 +187,10 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function gameIdChange(num) {
+            localStorage.setItem("gameId", num); // Use setItem to update gameId
+        }
+    </script>
 </body>
 </html>

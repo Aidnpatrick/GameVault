@@ -1,0 +1,60 @@
+{
+    "games": [
+        {
+            "id": 0,
+            "gamelink": "https://macvgg-games.github.io/action-games/slope/",
+            "info": "Slope is a fast-paced endless running game where players control a ball rolling down a steep, neon-lit slope. The game challenges players to dodge obstacles, navigate sharp turns, and avoid falling off the edge as the speed gradually increases. With its simple controls and intense gameplay, Slope tests reflexes and precision in an exhilarating race for survival.",
+            "gamename": "Slope"
+        }
+        ,
+        {
+            "id": 1,
+            "gamelink": "https://macvgg-games.github.io/driving-games/basket-random/",
+            "info": "Basket Random is a chaotic arcade basketball game with unpredictable mechanics and quirky physics. Simple controls and dynamic gameplay make it perfect for quick, fun matches solo or with friends!",
+            "gamename": "Basket Random"
+        }
+        ,
+        {
+            "id": 2,
+            "gamelink": "https://macvgg-games.github.io/action-games/1v1lol/",
+            "info": "1v1.LOL is an online multiplayer battle royale game that combines fast-paced building mechanics with intense combat. Players can build structures for defense or offense while engaging in one-on-one duels or team battles. Known for its competitive gameplay and customizable options, the game offers a variety of modes to test players' strategic and shooting skills.",
+            "gamename": "1v1.lol"
+        }
+        ,
+        {
+            "id": 3,
+            "gamelink": "https://macvgg-games.github.io/strategy-games/2048/",
+            "info": "2048 is a simple yet addictive puzzle game where players slide numbered tiles on a grid to combine them and create a tile with the value of 2048. Each move adds a new tile to the board, and the challenge lies in strategizing to prevent the grid from filling up. Its minimalistic design and easy-to-learn mechanics make it a favorite for casual gaming and mental exercises.",
+            "gamename": "2048"
+        }
+        ,
+        {
+            "id": 4,
+            "gamelink": "",
+            "info": "The Backrooms, created by Fancy, is a survival horror game inspired by the viral internet lore of an endless maze of eerily monotonous, yellow-tinted rooms. Players must navigate the labyrinth while avoiding mysterious entities and managing limited resources, such as sanity and stamina. The game’s immersive atmosphere and sense of dread capture the unsettling essence of being 'lost' in a space that feels both familiar and otherworldly.",
+            "gamename": "Backrooms"
+        }
+        ,
+        {
+            "id": 5,
+            "gamelink": "https://macvgg-games.github.io/driving-games/adventure-drivers/",
+            "info": 
+            "Adventure Drivers is a fun and fast-paced racing game where players compete in wacky vehicles across diverse, obstacle-filled tracks. Combining speed with strategic item use, the game challenges players to outmaneuver opponents while collecting coins and upgrades. With colorful visuals and engaging gameplay, it offers a thrilling experience for racing enthusiasts of all ages.",
+            "gamename": "Adventure Drivers"
+        }
+        ,
+        {
+            "id": 6,
+            "gamelink": "https://macvgg-games.github.io/strategy-games/bloonstd4/",
+            "info":"Bloons Tower Defense 4 is a strategy game where players use monkey-themed towers and special abilities to pop waves of colorful balloons, or 'bloons'before they reach the end of the track. With a variety of towers, upgrades, and maps, the game offers a deep and engaging experience as players strategize to counter different bloon types, including camo and lead. Its blend of charm and challenge makes it a standout in the tower defense genre.",
+            "gamename": "Bloon's Tower Defense 4"
+        }
+        ,
+        {
+            "id": "7",
+            "gamelink": "https://macvgg-games.github.io/action-games/blumgi-slime/",
+            "info": "Blumgi Slime is a quirky and fun multiplayer game where players control slime creatures in a series of competitive, physics-based challenges. The game features simple controls, where players must jump, swing, and throw their slime to outlast opponents in various mini-games. With its lighthearted gameplay and chaotic physics, Blumgi Slime offers an entertaining experience for friends looking to compete and have fun together.",
+            "gamename": "BlumgiSlime"
+        }
+    ]
+}

@@ -10,12 +10,6 @@
 <body>
 
     <div class="flex-row">
-        <nav class="side-bar">
-            <a class="heading" href="index.html">GameVault</a>
-            <a class="link-side-bar">Settings⚙️</a>
-            <a class="link-side-bar">Patch Notes📄</a>
-            <a class="link-side-bar">About🧑‍🦰</a>
-        </nav>
         <div class="right">
             <style>
                 .top {
@@ -29,12 +23,28 @@
 
                 }
             </style>
+            <script>
+                function gameListLoad() {
+                // Get the element by its ID
+                let list = document.getElementById('gameList');
+
+                // Toggle the display property
+                if (list.style.opacity === "1") {
+                    list.style.opacity = "0";
+                } else {
+                    list.style.opacity = "1";
+                }
+            }
+            </script>
             <div class="top">
                 <nav class="top-bar">
-    
-                    <button class="link" onclick="gameListLoad()">Games⬇</button>                
-                    <a class="link">Proxies🥷</a>
-                    <a class="link">Other Websites↗️</a>
+                    <a class="heading" href="../index.html">GameVault</a>
+                    <div style="display: flex;">
+                        
+                        <button class="link" onclick="gameListLoad()"><img src="icons/gamepad-solid.svg" >Games</button>                
+                        <a class="link"><img src="icons/server-solid.svg" alt="">Proxies</a>
+                        <a class="link">Other Websites↗️</a>
+                    </div>
                 </nav>
                 <div class="game-list" id="gameList" style="opacity: 0">
                     <div class="flex-row" style="justify-content: center" >
@@ -61,6 +71,14 @@
                 <br><br><br>
             </div>
             <div class="content">
+                <div class="section-regular">
+                    <h2 style="margin-left: 15px">❤️Favorites</h2>
+                    <p style="margin-left: 15px">You dont have any games favorited.💔</p>
+                    <br>
+                    <a class="library-button" style="margin-left:15px" href="games.html"><b>Browse some Games 🔎</b></a>
+                </div>
+                <br>
+                <br>
                 <div class="section-trending">
                     <h2 style="margin-left: 15px">🔥Trending - Check 'em out!</h2>
                     <div class="flex-row" style="justify-content: center;">
@@ -92,19 +110,13 @@
                 <br>
 
                 <div class="section-regular">
-                    <h2 style="margin-left: 15px">🫵Recommended for you</h2>
-                    <p style="margin-left: 15px">Play some of your favorite games to see what else you might like!😉</p>
+                    <h2 style="margin-left: 15px">🕛Recently Played</h2>
+                    <p style="margin-left: 15px">You don't have any recent games.</p>
                     <br>
                     <a class="library-button"style="margin-left: 15px" href="games.html"><b>Browse some Games 🔎</b></a>
                 </div>
                 <br>
                 <br>
-                <div class="section-regular">
-                    <h2 style="margin-left: 15px">❤️Favorites</h2>
-                    <p style="margin-left: 15px">You dont have any games favorited.💔</p>
-                    <br>
-                    <a class="library-button" style="margin-left:15px" href="games.html"><b>Browse some Games 🔎</b></a>
-                </div>
 
                 <br>
             </div>

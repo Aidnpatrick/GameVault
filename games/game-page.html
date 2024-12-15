@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="games-style.css">
+    <script src="../game-display.js"></script>
+    <script src="../game-display.js"></script>
+</head>
+<body>
+
+    <div class="flex-row">
+        <div class="right">
+            <style>
+                .top {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                    position: sticky;
+                    top: 0;
+                }
+            </style>
+            <script>
+                function gameListLoad() {
+                let list = document.getElementById('gameList');
+                if (list.style.opacity === "1") {
+                    list.style.opacity = "0";
+                } else {
+                    list.style.opacity = "1";
+                }
+            }
+            </script>
+            <div class="top">
+                <nav class="top-bar">
+                    <a class="heading" href="../index.html">GameVault</a>
+                    <div style="display: flex;">
+                        
+                        <button class="link" onclick="gameListLoad()"><img src="../icons/gamepad-solid.svg" alt="" >Games</button>                
+                        <a class="link"><img src="../icons/server-solid.svg" alt="">Proxies</a>
+                        <a class="link">Other Websites↗️</a>
+                    </div>
+                </nav>
+                <div class="game-list" id="gameList" style="opacity: 0">
+                    <div class="flex-row" style="justify-content: center">
+                        <a class="link-list">Platforming</a>
+                        <a class="link-list">2 Player</a>
+                        <a class="link-list">Shooting</a>
+                        <a class="link-list">Casual</a>
+                        <a class="link-list">Management</a>
+                        <a class="link-list">Sports</a>
+                        <a class="link-list">Puzzle</a>
+                        <a class="link-list">Action</a>
+                        <a class="link-list">Running</a>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <div class="center">
+                
+            </div>
+            <script>
+                // Ensure "gameId" is set in localStorage if not already defined
+console.log("Current gameId:", localStorage.getItem("gameId"));
+
+// Get necessary DOM elements
+const gameFrame = document.getElementById('game-frame');
+const gameDescription = document.getElementById('gamediscription');
+const gameName = document.getElementById('gameName');
+// Define the path to the JSON file
+const filePath = '../games.json';
+
+
+
+// Fetch data and update elements
+fetch(filePath)
+  .then(response => response.json())
+  .then(data => {
+    const gameId = localStorage.getItem("gameId");
+    
+    
+    // Validate gameId and update iframe and description
+    if (gameId !== null && data.games[gameId]) {
+      //problem
+      const gameData = data.games[gameId];
+
+      // Update iframe source with the gamelink (fallback to blank page if link is missing)
+      gameFrame.src = gameData.gamelink || "about:blank"; 
+
+      // Update game description (fallback message if info is missing)
+      gameDescription.innerHTML = gameData.info || "Game description not available.";
+
+      gameName.innerHTML = gameData.gamename || "Game Name not avalible";
+      
+      
+    } else {
+      console.error("Invalid gameId or missing game data.");
+      gameFrame.src = "about:blank";
+      gameDescription.innerHTML = "Game description not available.";
+    }
+  })
+  .catch(error => {
+    console.error("Error fetching game data:", error);
+
+    // Provide fallback content in case of an error
+    gameFrame.src = "about:blank";
+    gameDescription.innerHTML = "Error loading game data.";
+  });
+
+                // Log the current gameId for debugging
+
+                document.addEventListener('DOMContentLoaded', function() {
+                const fullscreenButton = document.getElementById('fullscreenButton');
+                const fullscreenIframe = document.getElementById('game-frame');
+
+                fullscreenButton.addEventListener('click', () => {
+                    if (!document.fullscreenElement) {
+                    fullscreenIframe.requestFullscreen();
+                    } else {
+                    document.exitFullscreen();
+                    }
+                });
+
+                document.addEventListener('fullscreenchange', () => {
+                    if (!document.fullscreenElement) {
+                    // Exit fullscreen mode
+                    document.getElementById('projectContainer').classList.remove('fullscreen');
+                    } else {
+                    // Enter fullscreen mode
+                    document.getElementById('projectContainer').classList.add('fullscreen');
+                    }
+                });
+                });
+            </script>
+            <div class="content">
+                <br>
+                <div class="flex-row-center">
+                    <div class="flex-column">
+                                            
+                        <iframe class="screen" id="game-frame"></iframe>
+                        <script type="module" src="../script.js"></script>
+                        <div class="bottom-bar">
+                            <h3 class="bottom-bar-heading" id="gameName"></h3>
+                            <div style="display: flex">
+                                <button class="button-bottom">
+                                    <img src="../icons/heart-regular.svg">
+                                </button>
+                                <button id="fullscreenbutton" class="button-bottom">
+                                    <img src="../icons/expand-solid.svg">
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="flex-column">
+                        <div class="recommended">
+                                <h3 class="sub-heading">Recommended games 🕹️</h3>
+                                <div class="flex-row-center">
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="flex-row-center">
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                </div>
+                                
+                                <br>
+                                <div class="flex-row-center">
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="flex-row-center">
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="flex-row-center">
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                    <div class="game-block-smaller">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="game-disc">
+                    <h2 style="margin-left: 10px">Controls🕹️</h2>
+                    <h2 style="margin-left: 10px">Description📃</h2>
+                    <p style="margin: 10px;font-size: 20px"id="gamediscription"></p>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+</body>
