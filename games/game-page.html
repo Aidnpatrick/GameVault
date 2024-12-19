@@ -65,77 +65,26 @@
                 
             </div>
             <script>
-                // Ensure "gameId" is set in localStorage if not already defined
-console.log("Current gameId:", localStorage.getItem("gameId"));
-
-// Get necessary DOM elements
-const gameFrame = document.getElementById('game-frame');
-const gameDescription = document.getElementById('gamediscription');
-const gameName = document.getElementById('gameName');
-// Define the path to the JSON file
-const filePath = '../games.json';
-
-
-
-// Fetch data and update elements
-fetch(filePath)
-  .then(response => response.json())
-  .then(data => {
-    const gameId = localStorage.getItem("gameId");
+                    function savedProject(id) {
+      // Check if 'savedProjects' exists in localStorage
+      if (!localStorage.getItem("savedProjects")) {
+        // Initialize the savedProjects array with the first ID
+        let savedProjects = [id];
+        localStorage.setItem("savedProjects", JSON.stringify(savedProjects));
+      } else {
+        // Retrieve the existing array
+        let storedArray = JSON.parse(localStorage.getItem("savedProjects"));
+        console.log("Before adding:", storedArray);
     
+        // Add the new project ID
+        storedArray.push(id);
     
-    // Validate gameId and update iframe and description
-    if (gameId !== null && data.games[gameId]) {
-      //problem
-      const gameData = data.games[gameId];
-
-      // Update iframe source with the gamelink (fallback to blank page if link is missing)
-      gameFrame.src = gameData.gamelink || "about:blank"; 
-
-      // Update game description (fallback message if info is missing)
-      gameDescription.innerHTML = gameData.info || "Game description not available.";
-
-      gameName.innerHTML = gameData.gamename || "Game Name not avalible";
-      
-      
-    } else {
-      console.error("Invalid gameId or missing game data.");
-      gameFrame.src = "about:blank";
-      gameDescription.innerHTML = "Game description not available.";
+        // Update localStorage with the new array
+        localStorage.setItem("savedProjects", JSON.stringify(storedArray));
+        console.log("After adding:", storedArray);
+      }
     }
-  })
-  .catch(error => {
-    console.error("Error fetching game data:", error);
-
-    // Provide fallback content in case of an error
-    gameFrame.src = "about:blank";
-    gameDescription.innerHTML = "Error loading game data.";
-  });
-
-                // Log the current gameId for debugging
-
-                document.addEventListener('DOMContentLoaded', function() {
-                const fullscreenButton = document.getElementById('fullscreenButton');
-                const fullscreenIframe = document.getElementById('game-frame');
-
-                fullscreenButton.addEventListener('click', () => {
-                    if (!document.fullscreenElement) {
-                    fullscreenIframe.requestFullscreen();
-                    } else {
-                    document.exitFullscreen();
-                    }
-                });
-
-                document.addEventListener('fullscreenchange', () => {
-                    if (!document.fullscreenElement) {
-                    // Exit fullscreen mode
-                    document.getElementById('projectContainer').classList.remove('fullscreen');
-                    } else {
-                    // Enter fullscreen mode
-                    document.getElementById('projectContainer').classList.add('fullscreen');
-                    }
-                });
-                });
+    
             </script>
             <div class="content">
                 <br>
@@ -147,10 +96,11 @@ fetch(filePath)
                         <div class="bottom-bar">
                             <h3 class="bottom-bar-heading" id="gameName"></h3>
                             <div style="display: flex">
-                                <button class="button-bottom">
+                                <button class="button-bottom" onclick="savedProject(localStorage.getItem('gameId'))">
                                     <img src="../icons/heart-regular.svg">
+
                                 </button>
-                                <button id="fullscreenbutton" class="button-bottom">
+                                <button id="fullscreenButton" class="button-bottom">
                                     <img src="../icons/expand-solid.svg">
                                 </button>
                             </div>
@@ -212,12 +162,38 @@ fetch(filePath)
                 </div>
                 <br>
                 <div class="game-disc">
-                    <h2 style="margin-left: 10px">Controls🕹️</h2>
-                    <h2 style="margin-left: 10px">Description📃</h2>
-                    <p style="margin: 10px;font-size: 20px"id="gamediscription"></p>
+                    <h2 style="margin-left: 20px">Controls🕹️</h2>
+                    <p style="margin: 20px; font-size: 20px;" id="controls"></p>
+                    <h2 style="margin-left: 20px">Description📃</h2>
+                    <p style="margin: 20px;font-size: 20px"id="gamediscription"></p>
                 </div>
                 <br>
 
+                <script>
+
+                    document.addEventListener('DOMContentLoaded', function() {
+                    const fullscreenButton = document.getElementById('fullscreenButton');
+                    const fullscreenIframe = document.getElementById('game-frame');
+    
+                    fullscreenButton.addEventListener('click', () => {
+                        if (!document.fullscreenElement) {
+                        fullscreenIframe.requestFullscreen();
+                        } else {
+                        document.exitFullscreen();
+                        }
+                    });
+    
+                    document.addEventListener('fullscreenchange', () => {
+                        if (!document.fullscreenElement) {
+                        // Exit fullscreen mode
+                        document.getElementById('projectContainer').classList.remove('fullscreen');
+                        } else {
+                        // Enter fullscreen mode
+                        document.getElementById('projectContainer').classList.add('fullscreen');
+                        }
+                    });
+                    });
+                </script>
             </div>
         </div>
     </div>

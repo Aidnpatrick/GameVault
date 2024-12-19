@@ -70,24 +70,34 @@
                 <a class="library-button" href="games.html"><b>Browse some Games 🔎</b></a>
                 <br><br><br>
             </div>
+            <script>
+            </script>
             <div class="content">
-                <div class="section-regular">
+                <div class="section-regular"style="position: relative">
                     <h2 style="margin-left: 15px">❤️Favorites</h2>
-                    <p style="margin-left: 15px">You dont have any games favorited.💔</p>
+                    <p style="margin-left: 15px;" id="noProjects"></p>
+                    <button class="trash-button" onclick="deleteAllFav()">
+                        <img src="icons/trash-solid.svg">
+                        Delete all
+                    </button>
+                    <div class="flex-library" id="favoriteDiv">
+                        
+                    </div>
                     <br>
-                    <a class="library-button" style="margin-left:15px" href="games.html"><b>Browse some Games 🔎</b></a>
                 </div>
                 <br>
                 <br>
                 <div class="section-trending">
-                    <h2 style="margin-left: 15px">🔥Trending - Check 'em out!</h2>
-                    <div class="flex-row" style="justify-content: center;">
+                    <h2 style="margin-left: 15px">🔥Popular - Check them out!</h2>
+                    <div class="flex-library" >
 
-                        <a class="game-block">
-                            <p>Slope</p>
+                        <a class="game-block" href="games/game-page.html" onclick="gameIdChange(0)">
+                            <img src="game-img/slope-img.jpg" class="img-game-block">
+                            <p class="game-name">Slope</p>
                         </a>
-                        <a class="game-block">
-                            <p>Basket Random</p>
+                        <a class="game-block" href="games/game-page.html" onclick="gameIdChange(1)">
+                            <img src="game-img/basket-random.png" class="img-game-block">
+                            <p class="game-name">Basket Random</p>
                         </a>
                         <div class="game-block">
                             <p>Basketball Stars</p>

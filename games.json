@@ -4,35 +4,45 @@
             "id": 0,
             "gamelink": "https://macvgg-games.github.io/action-games/slope/",
             "info": "Slope is a fast-paced endless running game where players control a ball rolling down a steep, neon-lit slope. The game challenges players to dodge obstacles, navigate sharp turns, and avoid falling off the edge as the speed gradually increases. With its simple controls and intense gameplay, Slope tests reflexes and precision in an exhilarating race for survival.",
-            "gamename": "Slope"
+            "gamename": "Slope",
+            "controls": "A, D or Arrow Keys",
+            "img": "slope-img.jpg"
         }
         ,
         {
             "id": 1,
             "gamelink": "https://macvgg-games.github.io/driving-games/basket-random/",
             "info": "Basket Random is a chaotic arcade basketball game with unpredictable mechanics and quirky physics. Simple controls and dynamic gameplay make it perfect for quick, fun matches solo or with friends!",
-            "gamename": "Basket Random"
+            "gamename": "Basket Random",
+            "controls": "Player 1: W, Player 2: Up Arrow key",
+            "img": "basket-random.png"
         }
         ,
         {
             "id": 2,
             "gamelink": "https://macvgg-games.github.io/action-games/1v1lol/",
             "info": "1v1.LOL is an online multiplayer battle royale game that combines fast-paced building mechanics with intense combat. Players can build structures for defense or offense while engaging in one-on-one duels or team battles. Known for its competitive gameplay and customizable options, the game offers a variety of modes to test players' strategic and shooting skills.",
-            "gamename": "1v1.lol"
+            "gamename": "1v1.lol",
+            "controls": "WASD to move, Click to shoot, Right Click to Aim, ZXCV to build",
+            "img": "1v1-lol.jpg"
         }
         ,
         {
             "id": 3,
             "gamelink": "https://macvgg-games.github.io/strategy-games/2048/",
             "info": "2048 is a simple yet addictive puzzle game where players slide numbered tiles on a grid to combine them and create a tile with the value of 2048. Each move adds a new tile to the board, and the challenge lies in strategizing to prevent the grid from filling up. Its minimalistic design and easy-to-learn mechanics make it a favorite for casual gaming and mental exercises.",
-            "gamename": "2048"
+            "gamename": "2048",
+            "controls": "Arrow keys",
+            "img": "2048-img.jpg"
         }
         ,
         {
             "id": 4,
             "gamelink": "",
             "info": "The Backrooms, created by Fancy, is a survival horror game inspired by the viral internet lore of an endless maze of eerily monotonous, yellow-tinted rooms. Players must navigate the labyrinth while avoiding mysterious entities and managing limited resources, such as sanity and stamina. The game’s immersive atmosphere and sense of dread capture the unsettling essence of being 'lost' in a space that feels both familiar and otherworldly.",
-            "gamename": "Backrooms"
+            "gamename": "Backrooms",
+            "controls": "WASD to Move, Mouse to look around",
+            "img": "backrroms-img.jpg"
         }
         ,
         {
@@ -40,21 +50,100 @@
             "gamelink": "https://macvgg-games.github.io/driving-games/adventure-drivers/",
             "info": 
             "Adventure Drivers is a fun and fast-paced racing game where players compete in wacky vehicles across diverse, obstacle-filled tracks. Combining speed with strategic item use, the game challenges players to outmaneuver opponents while collecting coins and upgrades. With colorful visuals and engaging gameplay, it offers a thrilling experience for racing enthusiasts of all ages.",
-            "gamename": "Adventure Drivers"
+            "gamename": "Adventure Drivers",
+            "controls": "WASD to Drive, Shift to use Nitro, Enter for Special Power",
+            "img": "adventure-drivers.jpg"
         }
         ,
         {
             "id": 6,
             "gamelink": "https://macvgg-games.github.io/strategy-games/bloonstd4/",
             "info":"Bloons Tower Defense 4 is a strategy game where players use monkey-themed towers and special abilities to pop waves of colorful balloons, or 'bloons'before they reach the end of the track. With a variety of towers, upgrades, and maps, the game offers a deep and engaging experience as players strategize to counter different bloon types, including camo and lead. Its blend of charm and challenge makes it a standout in the tower defense genre.",
-            "gamename": "Bloon's Tower Defense 4"
+            "gamename": "Bloon's Tower Defense 4",
+            "controls": "Mouse",
+            "img": "bloons-td-4.jpg"
         }
         ,
         {
             "id": "7",
             "gamelink": "https://macvgg-games.github.io/action-games/blumgi-slime/",
             "info": "Blumgi Slime is a quirky and fun multiplayer game where players control slime creatures in a series of competitive, physics-based challenges. The game features simple controls, where players must jump, swing, and throw their slime to outlast opponents in various mini-games. With its lighthearted gameplay and chaotic physics, Blumgi Slime offers an entertaining experience for friends looking to compete and have fun together.",
-            "gamename": "BlumgiSlime"
+            "gamename": "BlumgiSlime",
+            "controls": "Player 1: A, Player 2: B",
+            "img": "blumgi-slime.jpg"
+        }
+        ,
+        {
+            "id": "8",
+            "gamelink":"https://macvgg-games.github.io/driving-games/basketball-stars/",
+            "info": "Basketball Stars is an exciting multiplayer mobile game where players compete in fast-paced one-on-one basketball matches. With customizable characters and various game modes, it challenges players to showcase their shooting, dribbling, and defensive skills. The game's competitive nature and real-time matches make it a favorite among basketball enthusiasts and casual gamers alike.",
+            "gamename": "Basketball Stars",
+            "controls": "P: Pause, Up Arrow: Jump, Down Arrow: Pump / Block, Left / Right Arrows: Move, Double Left / Right Arrows: Sprint, X: Shoot / Steal, Z: Super, W: Jump (Player 1), S: Pump / Block (Player 1), A / D: Move (Player 1), Double A / D: Sprint (Player 1), B: Shoot / Steal (Player 1), V: Super (Player 1), Up Arrow: Jump (Player 2), Down Arrow: Pump / Block (Player 2), Left / Right Arrow Keys: Move (Player 2), Double Left / Right Arrow Keys: Sprint (Player 2), L: Shoot / Steal (Player 2), K: Super (Player 2).",
+            "img": "basketball-stars.jpg"
+        }
+        ,
+        {
+            "id": "9",
+            "gamelink": "https://macvgg-games.github.io/driving-games/boxing-random/",
+            "info": "Boxing Random is a quirky and entertaining game where players control boxers with unpredictable movements. With simple controls and hilarious physics, the game turns every match into a chaotic and fun-filled experience. Whether playing solo or with friends, Boxing Random guarantees laughter and surprises in every round.",
+            "gamename": "Boxing Random",
+            "controls": "Player 1: W, Player 2: Up Arrow Key",
+            "img": "boxing-random.jpg"
+        }
+        ,
+        {
+            "id": "10",
+            "gamelink": "https://macvgg-games.github.io/driving-games/scrapmetal/",
+            "info": "Scrap Metal 3 is a thrilling 3D sandbox driving game where players can explore, customize, and test a variety of vehicles in an open-world environment. The game allows users to build ramps, loops, and obstacles to perform stunts or simply enjoy free driving without limits. With realistic physics and endless possibilities, Scrap Metal 3 offers a creative and immersive experience for car enthusiasts and gamers alike.",
+            "gamename": "Scrap Metal 3",
+            "controls:": "Coming Soon",
+            "img": "scrap-metal-3.jpg"
+        }
+        ,
+        {
+            "id": "11",
+            "gamelink": "https://macvgg-games.github.io/action-games/fnaf/",
+            "info": "Five Nights at Freddy's is a popular survival horror game where players take on the role of a night security guard at Freddy Fazbear's Pizza. The challenge lies in surviving five nights while being stalked by creepy, animatronic characters that come to life after hours. With limited resources and a tense atmosphere, the game delivers a chilling experience, keeping players on edge with its jump scares and eerie lore.",
+            "gamename": "Five Nights At Freddy's", 
+            "controls": "Mouse to move",
+            "img": "five-nights-at-freddys.jpg"
+
+        }
+        ,
+        {
+            "id": "12",
+            "gamelink": "https://macvgg-games.github.io/action-games/stick-duel-battle/",
+            "info": "Stick Duel Battle is an action-packed multiplayer stickman game where players face off in thrilling one-on-one duels. Featuring a variety of weapons, creative maps, and dynamic physics, each battle is unpredictable and exciting. With its fast-paced gameplay and simple controls, it’s a fun and competitive experience for players of all skill levels.",
+            "gamename": "Stick Duel Battle",
+            "controls": "WASD to Move(Player 1), Arrow Keys to move(Player 2), F to Shoot(Player 1), L to Shoot(Player 2)",
+            "img": "stick-duel-battle.jpg"
+        }
+        ,
+        {
+            "id": "13",
+            "gamelink": "https://macvgg-games.github.io/action-games/awesome-tanks-2/",
+            "info": "Awesome Tanks 2 is an action-packed tank battle game where players control a customizable tank to take on enemies across challenging levels. Featuring upgrades for weapons, armor, and speed, the game lets players strategize their approach to dominate the battlefield. With its explosive gameplay and engaging missions, Awesome Tanks 2 offers hours of fun for fans of arcade-style combat games.",
+            "gamename": "Awesome Tanks 2",
+            "controls": "WASD to Move, Click to Shoot",
+            "img": "awesome-tanks-2.jpg"
+        }
+        ,
+        {
+            "id": "14",
+            "gamelink": "https://macvgg-games.github.io/action-games/bacon-may-die/",
+            "info": "Bacon May Die is a fast-paced, side-scrolling action game where players control a heroic pig battling waves of enemies. Armed with a variety of weapons and quirky outfits, players fight off zombies, animals, and other bizarre foes in a chaotic, cartoon-style world. With its humorous visuals and addictive gameplay, Bacon May Die delivers a unique and entertaining brawl experience.",
+            "gamename": "Bacon May Die",
+            "controls": "WASD to move, hold A or D to Shoot",
+            "img": "bacon-may-die.jpg"
+        }
+        ,
+        {
+            "id": "15",
+            "gamelink": "https://macvgg-games.github.io/action-games/backrooms-2d/",
+            "info": "Backrooms 2D is a chilling survival horror game that brings the eerie and infinite maze of the backrooms into a two-dimensional format. Players navigate endless, dimly lit hallways while evading mysterious entities and searching for an escape. With its unsettling atmosphere and minimalist design, the game captures the essence of isolation and dread, making it a haunting experience for players.",
+            "gamename": "Backrooms 2d",
+            "controls": "WASD to Move",
+            "img": "backrooms-2d.jpg"
         }
     ]
 }

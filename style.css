@@ -25,6 +25,8 @@ nav.top-bar {
     top: 0;
     z-index: 1000;
     opacity: 95%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        
 }
 .game-list {
     width: 100%;
@@ -126,8 +128,8 @@ nav.top-bar {
     background-color: #121212;
     border: 1px solid #515151; 
     margin-top: -20px;
-    height: 280px;
     width: 95%;
+    min-height: 280px;
     border-radius: 5px;
     transition: border 0.1s ease, background-image 0.3s ease;
     
@@ -167,12 +169,11 @@ nav.top-bar {
 .game-block {
     color: white;
     text-decoration: none;
-    margin-inline: 12px;
+    margin: 12px;
     width: 150px;
-    height: 200px;
-    background-color:rgb(64, 64, 64);
+    height: 150px;
+    background-color:rgb(33, 33, 33);
     border-radius: 5px;
-
     align-items: center;
     display: flex;
     flex-direction: column-reverse;
@@ -183,6 +184,27 @@ nav.top-bar {
 
 .game-block:hover {
     border: 1px solid white;
+}
+
+.img-game-block {
+    border-radius: 5px;
+    width: 150px;
+    height: 180px;
+    -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+.game-name, .game-name-favorite {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    /*text-shadow: 0 4px 4px rgba(0, 0, 0, 200);*/
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    position: absolute;
+}
+.game-name-favorite {
+    margin-bottom: 15px;
 }
 @media(max-width: 1000px) {
     .game-block {
@@ -200,7 +222,7 @@ nav.top-bar {
 
     background-color: black;
 }
-.link {
+.link, .trash-button {
     align-items: center;
     display: flex;
     padding: 15px;
@@ -209,12 +231,16 @@ nav.top-bar {
     font-family: Arial, Helvetica, sans-serif;
     transition: background 0.3s ease;
     cursor: pointer;
-    border: none;
     background-color: #111111;
     color: rgb(219, 219, 219);
     gap: 5px;
 }
-
+.link {
+    border: none;
+}
+.trash-button {
+    border-radius: 5px; border: 1px solid rgb(81,81,81); background-color: rgb(39, 39, 39); position: absolute; right: 10px; top: 15px;
+}
 .link:hover {
     background-color: rgb(64, 64, 64);
 
@@ -274,4 +300,32 @@ nav.top-bar {
 .library-button:hover {
     background-color: rgb(0, 214, 0);
     
+}
+.trash-button {
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #0a0a0a;
+    background-color: #0a0a0a;
+    color: rgb(219, 219, 219);
+    
+}
+.trash-button:hover {
+    border: 1px solid rgb(124, 0, 0);
+}
+.trash-button img {
+    width: 20px;
+    height: 20px;
+}
+.flex-library {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
